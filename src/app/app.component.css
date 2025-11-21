@@ -202,6 +202,22 @@
   width: 100%;
 }
 
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+.hamburger mat-icon {
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+}
+
 /* Hero Section */
 .hero {
   min-height: 100vh;
@@ -835,11 +851,46 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
+  .hamburger {
+    display: block;
   }
 
-  .hero-content,
+  .nav-links {
+    position: fixed;
+    top: 73px;
+    right: -100%;
+    width: 70%;
+    height: calc(100vh - 73px);
+    background: rgba(10, 14, 39, 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease-in-out;
+    border-left: 1px solid var(--border-color);
+  }
+
+  .nav-links.mobile-active {
+    right: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    flex-direction: column-reverse;
+    display: flex;
+  }
+
   .contact-content {
     grid-template-columns: 1fr;
     gap: 2rem;

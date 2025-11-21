@@ -15,12 +15,17 @@ export class AppComponent {
   name = 'LOUIE NUEZ';
   title = 'Full Stack Developer';
   description = 'Passionate about creating beautiful, functional web applications that make a difference.';
+  mobileMenuOpen = false;
 
   contactForm = {
     name: '',
     email: '',
     message: ''
   };
+
+  toggleMobileMenu() {
+    this.mobileMenuOpen = !this.mobileMenuOpen;
+  }
 
   skillCategories = [
     {
@@ -66,10 +71,11 @@ export class AppComponent {
       liveUrl: 'https://rescuelinkph.online/'
     },
     {
-      title: 'Portfolio CMS',
-      description: 'Content management system for photographers and artists to showcase their work beautifully.',
-      technologies: ['Next.js', 'PostgreSQL', 'AWS S3', 'Tailwind', 'TypeScript'],
-      icon: 'photo_library'
+      title: 'My Portfolio',
+      description: 'Louie\'s Portfolio is a clean, modern showcase of my web development journey — featuring my skills in Angular, .NET C#, and PostgreSQL, as well as my real projects and experience. Explore interactive demos, code samples, and my latest work, and feel free to connect with me for collaboration or hiring.',
+      technologies: ['Angular', 'TypeScript', 'Material UI'],
+      icon: 'photo_library',
+      liveUrl: 'https://iamlouie.github.io/my-portfolio/'
     },
     {
       title: 'Municipal Services Portal',
