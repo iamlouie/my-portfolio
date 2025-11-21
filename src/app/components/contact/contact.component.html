@@ -1,0 +1,52 @@
+<!-- Contact Section -->
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="section-header">
+      <h2>Get In Touch</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="contact-content">
+      <div class="contact-info">
+        <div class="contact-item">
+          <mat-icon>email</mat-icon>
+          <div>
+            <h4>Email</h4>
+            <p>iamlouienuez&#64;gmail.com</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <mat-icon>phone</mat-icon>
+          <div>
+            <h4>Phone</h4>
+            <p>+63 995 294 3115</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <mat-icon>location_on</mat-icon>
+          <div>
+            <h4>Location</h4>
+            <p>Cebu City, Philippines</p>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" (ngSubmit)="onSubmitContact($event)">
+        <div class="form-group">
+          <mat-icon>person</mat-icon>
+          <input type="text" placeholder="Your Name" [(ngModel)]="contactForm.name" name="name" required>
+        </div>
+        <div class="form-group">
+          <mat-icon>email</mat-icon>
+          <input type="email" placeholder="Your Email" [(ngModel)]="contactForm.email" name="email" required>
+        </div>
+        <div class="form-group">
+          <mat-icon>message</mat-icon>
+          <textarea rows="5" placeholder="Your Message" [(ngModel)]="contactForm.message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!isFormValid()">
+          <mat-icon>send</mat-icon>
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
