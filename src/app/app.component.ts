@@ -15,12 +15,17 @@ export class AppComponent {
   name = 'LOUIE NUEZ';
   title = 'Full Stack Developer';
   description = 'Passionate about creating beautiful, functional web applications that make a difference.';
+  mobileMenuOpen = false;
 
   contactForm = {
     name: '',
     email: '',
     message: ''
   };
+
+  toggleMobileMenu() {
+    this.mobileMenuOpen = !this.mobileMenuOpen;
+  }
 
   skillCategories = [
     {

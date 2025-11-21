@@ -14,12 +14,15 @@
       <mat-icon>code</mat-icon>
       <span>{{name}}</span>
     </div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+    <button class="hamburger" (click)="toggleMobileMenu()" [class.active]="mobileMenuOpen">
+      <mat-icon>{{ mobileMenuOpen ? 'close' : 'menu' }}</mat-icon>
+    </button>
+    <ul class="nav-links" [class.mobile-active]="mobileMenuOpen">
+      <li><a href="#home" (click)="toggleMobileMenu()">Home</a></li>
+      <li><a href="#about" (click)="toggleMobileMenu()">About</a></li>
+      <li><a href="#skills" (click)="toggleMobileMenu()">Skills</a></li>
+      <li><a href="#projects" (click)="toggleMobileMenu()">Projects</a></li>
+      <li><a href="#contact" (click)="toggleMobileMenu()">Contact</a></li>
     </ul>
   </div>
 </nav>
@@ -44,17 +47,17 @@
           </a>
         </div>
         <div class="social-links">
-          <a href="#" class="social-icon">
-            <mat-icon>code</mat-icon>
+          <a href="https://facebook.com/iamlouienuez" target="_blank" rel="noopener" class="social-icon">
+            <mat-icon>facebook</mat-icon>
           </a>
-          <a href="#" class="social-icon">
-            <mat-icon>language</mat-icon>
+          <a href="https://m.me/iamlouienuez" target="_blank" rel="noopener" class="social-icon">
+            <mat-icon>messenger</mat-icon>
           </a>
-          <a href="#" class="social-icon">
-            <mat-icon>work</mat-icon>
+          <a href="https://instagram.com/louie_nuez" target="_blank" rel="noopener" class="social-icon">
+            <mat-icon>camera_alt</mat-icon>
           </a>
-          <a href="#" class="social-icon">
-            <mat-icon>email</mat-icon>
+          <a href="https://tiktok.com/@iamlouie97" target="_blank" rel="noopener" class="social-icon">
+            <mat-icon>music_note</mat-icon>
           </a>
         </div>
       </div>
@@ -214,10 +217,5 @@
 <footer class="footer">
   <div class="container">
     <p>&copy; 2025 {{name}}. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="#"><mat-icon>code</mat-icon></a>
-      <a href="#"><mat-icon>language</mat-icon></a>
-      <a href="#"><mat-icon>work</mat-icon></a>
-    </div>
   </div>
 </footer>
