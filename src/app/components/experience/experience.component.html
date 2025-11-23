@@ -1,19 +1,19 @@
 <!-- Experience & Education Section -->
 <section id="experience" class="experience">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header scroll-animate">
       <h2>Experience & Education</h2>
       <div class="underline"></div>
     </div>
     <div class="experience-content">
       <!-- Experience -->
-      <div class="timeline-section">
+      <div class="timeline-section scroll-animate">
         <h3 class="section-title">
           <mat-icon>work</mat-icon>
           Work Experience
         </h3>
         <div class="timeline">
-          <div class="timeline-item" *ngFor="let exp of experiences">
+          <div class="timeline-item scroll-animate" *ngFor="let exp of experiences">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
               <span class="year">{{exp.year}}</span>
@@ -28,13 +28,13 @@
       </div>
 
       <!-- Education -->
-      <div class="timeline-section">
+      <div class="timeline-section scroll-animate">
         <h3 class="section-title">
           <mat-icon>school</mat-icon>
           Education
         </h3>
         <div class="timeline">
-          <div class="timeline-item" *ngFor="let edu of education">
+          <div class="timeline-item scroll-animate" *ngFor="let edu of education">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
               <span class="year">{{edu.year}}</span>

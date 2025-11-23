@@ -162,6 +162,26 @@
   box-shadow: none;
 }
 
+/* Scroll Animations */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-animate.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-info.scroll-animate {
+  transition-delay: 0.2s;
+}
+
+.contact-form.scroll-animate {
+  transition-delay: 0.4s;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .contact-content {
